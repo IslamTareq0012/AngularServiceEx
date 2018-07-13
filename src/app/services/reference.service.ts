@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Observable';
 import { Employee } from '../models/employee';
+import { filter, map, take } from 'rxjs/operators';
 
 @Injectable()
 export class ReferenceService {
@@ -12,8 +13,8 @@ export class ReferenceService {
 
     getAllEmployees(): Observable<any> {
         try {
-            return this.http.get('assets/service.json')   // web service API. its pointing to http://localhost:4200/assets/service.json
-                .map(this.extractData)
+            return this.http.get('https://jsonplaceholder.typicode.com/photos').
+                map(this.extractData).map(res => res.slice(0, 10))
                 .catch(this.handleError);
         } catch (error) { console.log(error); }
     }

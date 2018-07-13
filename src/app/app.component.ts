@@ -8,21 +8,22 @@ import { Http } from '@angular/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit  {
+export class AppComponent implements OnInit {
   title = 'Angular Service app';
   employeesInfo: any;
   constructor(public referService: ReferenceService, public http: Http) { }
   getAllEmployees() {
     this.referService.getAllEmployees()
       .subscribe((result: any) => {
-       console.log('the employess data:' + result);
-       this.employeesInfo = result;
+
+        console.log('the employess data:' + result);
+        this.employeesInfo = result;
       },
       (error) => {
-        console.log('done employees method');
+        console.log('done employees method', error);
       });
-   }
-    ngOnInit() {
-      this.getAllEmployees();
-    }
+  }
+  ngOnInit() {
+    this.getAllEmployees();
+  }
 }
