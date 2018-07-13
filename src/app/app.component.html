@@ -1,23 +1,52 @@
-<!-- <h1 style="text-align: center">Welcome to {{title}}!</h1>
-<h3>Service with Json file</h3>
-<h3 style="text-align: center">All EmployeesInfo here</h3>
-<hr>
-<div style="text-align: center">
-<table class="table table-striped table-hover table-bordered" style="text-align: center;">
-	<thead>
-		<tr>
-			<th>EMP ID</th>
-			<th>FIRST NAME</th>
-			<th>LAST NAME</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr *ngFor="let emp of employeesInfo;">
-			<td>{{emp.id}}</td>
-			<td>{{emp.firstName}}</td>
-			<td>{{emp.lastName}}</td>
-		</tr>
-	</tbody>
-</table>
+<!--    color palettes       -->
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+	 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	<a class="navbar-brand" href="#">Navbar</a>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="text" placeholder="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	</div>
+</nav><br>
+<div class="container">
+	<table class="table">
+		<thead class="thead-inverse">
+			<tr>
+				<th>Image</th>
+				<th>Title</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let object of Objects">
+				<td><img src="{{object.thumbnailUrl}}" alt="Smiley face" height="100" width="100"></td>
+				<td>{{object.title}}</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
-<hr> -->
+<div class="footer">
+	<div id="button"></div>
+	<div id="container">
+		<div id="cont">
+			<div class="footer_center">
+				<h3>Classy footer text</h3>
+			</div>
+		</div>
+	</div>
+</div>

@@ -10,14 +10,14 @@ import { Http } from '@angular/http';
 })
 export class AppComponent implements OnInit {
   title = 'Angular Service app';
-  employeesInfo: any;
+  Objects: any;
   constructor(public referService: ReferenceService, public http: Http) { }
   getAllEmployees() {
     this.referService.getAllEmployees()
       .subscribe((result: any) => {
 
         console.log('the employess data:' + result);
-        this.employeesInfo = result;
+        this.Objects = result;
       },
       (error) => {
         console.log('done employees method', error);
